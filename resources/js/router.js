@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 
 import Home from './components/Home.vue';
 import Registration from './components/Registration.vue';
+import MyAccount from './components/MyAccount.vue';
 
 const routes = [
   {
@@ -17,6 +18,12 @@ const routes = [
     component: Registration,
     name: 'Registration',
   },
+  {
+    path: '/my-account',
+    component: MyAccount,
+    name: 'my-account',
+  },
+
 ];
 
 const router = new VueRouter({
