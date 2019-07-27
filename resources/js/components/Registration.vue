@@ -57,7 +57,7 @@
           <label>
             <p>Confirm Password</p>
             <input
-              type="text"
+              type="password"
               @input="validatePassword"
               v-model="userData.password_confirmation"
               name="password_confirmation"
@@ -130,19 +130,19 @@ export default {
 
               // TODO: Waiting kirill fox fix login backedn
               //Login user after successfull registration
-              // axios
-              //   .post('/api/auth/login',{
-              //     email : this.userData.email,
-              //     password : this.userData.password,
-              //     remember_me : false
-              //   })
-              //   .then(res => {
-              //
-              //     console.log(res);
-              //   })
-              //   .catch(error => {
-              //     console.log(error);
-              //   });
+              axios
+                .post('/api/auth/login',{
+                  email : this.userData.email,
+                  password : this.userData.password,
+                  remember_me : false
+                })
+                .then(res => {
+
+                  console.log(res);
+                })
+                .catch(error => {
+                  console.log(error);
+                });
             })
             .catch(error => {
               console.log(error);

@@ -12,7 +12,7 @@
       </nav>
 
       <div class="user-actions">
-        <button class="btn inverted" v-if="currentUser == false" :to="'/registration'">SignUp</button>
+        <router-link class="btn inverted" v-if="currentUser == false" :to="'/registration'">SignUp</router-link>
         <button class="btn" v-if="currentUser == false" @click="openLogin">Login</button>
 
         <router-link v-if="currentUser == true" :to="'/my-account'">My Account</router-link>

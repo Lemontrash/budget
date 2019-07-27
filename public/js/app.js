@@ -30962,6 +30962,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     createUser: function createUser() {
+      var _this = this;
+
       //validate user data
       this.validateData = true; //check if all validated
 
@@ -30977,19 +30979,16 @@ __webpack_require__.r(__webpack_exports__);
         axios.post('/api/auth/signup', this.userData).then(function (res) {
           console.log(res); // TODO: Waiting kirill fox fix login backedn
           //Login user after successfull registration
-          // axios
-          //   .post('/api/auth/login',{
-          //     email : this.userData.email,
-          //     password : this.userData.password,
-          //     remember_me : false
-          //   })
-          //   .then(res => {
-          //
-          //     console.log(res);
-          //   })
-          //   .catch(error => {
-          //     console.log(error);
-          //   });
+
+          axios.post('/api/auth/login', {
+            email: _this.userData.email,
+            password: _this.userData.password,
+            remember_me: false
+          }).then(function (res) {
+            console.log(res);
+          })["catch"](function (error) {
+            console.log(error);
+          });
         })["catch"](function (error) {
           console.log(error);
         });
@@ -67626,7 +67625,7 @@ var render = function() {
                 }
               ],
               attrs: {
-                type: "text",
+                type: "password",
                 name: "password_confirmation",
                 minlength: "6"
               },
@@ -67850,7 +67849,7 @@ var render = function() {
           [
             _vm.currentUser == false
               ? _c(
-                  "button",
+                  "router-link",
                   {
                     staticClass: "btn inverted",
                     attrs: { to: "/registration" }
