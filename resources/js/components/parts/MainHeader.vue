@@ -96,6 +96,8 @@ export default {
   left: 0;
   width: 100%;
   height: 80px;
+  background-color: #f8fafc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 
   .header-content {
     width:100%;

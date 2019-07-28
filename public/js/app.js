@@ -31152,10 +31152,23 @@ __webpack_require__.r(__webpack_exports__);
               position: 'bottom'
             }
           }
-        }]
-      },
-      fill: {
-        type: 'gradient'
+        }],
+        colors: ['#fc00ff', '#ee9ca7', '#525252', '#F1F2B5', '#D1913C', '#7b4397', '#136a8a'],
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            type: "horizontal",
+            // shadeIntensity: 1,
+            gradientToColors: ['#00dbde', '#ffdde1', '#3d72b4', '#135058', '#FFD194', '#dc2430', '#267871'],
+            // optional, if not defined - uses the shades of same color in series
+            // inverseColors: true,
+            // opacityFrom: 1,
+            opacityTo: 1 // stops: [0, 50, 100],
+            // colorStops: []
+
+          }
+        }
       }
     };
   },
@@ -35975,7 +35988,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".header[data-v-7ccfcfc0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 80px;\n}\n.header .header-content[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  max-width: 1440px;\n  padding: 8px 24px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n}\n.header .header-content .logo[data-v-7ccfcfc0] {\n  width: 160px;\n  height: 80px;\n  flex-basis: 20%;\n}\n.header .header-content .logo img[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n}\n.header .header-content nav.main-menu[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-grow: 2;\n  padding: 0 16px;\n}\n.header .header-content nav.main-menu a[data-v-7ccfcfc0] {\n  display: block;\n  margin: 0 8px;\n  color: #333;\n  font-size: 18px;\n}\n.header .header-content .user-actions[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  flex-basis: 20%;\n}\n.header .header-content .user-actions .btn[data-v-7ccfcfc0] {\n  display: block;\n  margin-left: 16px;\n}", ""]);
+exports.push([module.i, ".header[data-v-7ccfcfc0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 80px;\n  background-color: #f8fafc;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n}\n.header .header-content[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  max-width: 1440px;\n  padding: 8px 24px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n}\n.header .header-content .logo[data-v-7ccfcfc0] {\n  width: 160px;\n  height: 80px;\n  flex-basis: 20%;\n}\n.header .header-content .logo img[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n}\n.header .header-content nav.main-menu[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-grow: 2;\n  padding: 0 16px;\n}\n.header .header-content nav.main-menu a[data-v-7ccfcfc0] {\n  display: block;\n  margin: 0 8px;\n  color: #333;\n  font-size: 18px;\n}\n.header .header-content .user-actions[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  flex-basis: 20%;\n}\n.header .header-content .user-actions .btn[data-v-7ccfcfc0] {\n  display: block;\n  margin-left: 16px;\n}", ""]);
 
 // exports
 
