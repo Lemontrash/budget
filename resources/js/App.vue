@@ -2,9 +2,9 @@
   <main>
     <main-header />
     <router-view></router-view>
-    <passport-clients></passport-clients>
+    <!-- <passport-clients></passport-clients>
     <passport-authorized-clients></passport-authorized-clients>
-    <passport-personal-access-tokens></passport-personal-access-tokens>
+    <passport-personal-access-tokens></passport-personal-access-tokens> -->
   </main>
 </template>
 
@@ -32,5 +32,10 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+@media (max-width:900px) {
+  main {
+    padding:76px 12px 0;
+  }
 }
 </style>

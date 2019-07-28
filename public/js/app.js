@@ -31149,7 +31149,7 @@ __webpack_require__.r(__webpack_exports__);
           breakpoint: 480,
           options: {
             chart: {
-              width: 200
+              width: 280
             },
             legend: {
               position: 'bottom'
@@ -31355,6 +31355,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -31385,6 +31390,9 @@ __webpack_require__.r(__webpack_exports__);
 
   },
   methods: {
+    openMobileMenu: function openMobileMenu(e) {
+      document.querySelector('.header').classList.toggle('is_active');
+    },
     logout: function logout() {
       var _this2 = this;
 
@@ -36652,7 +36660,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "main[data-v-f348271a] {\n  max-width: 1440px;\n  padding: 96px 24px 0;\n  margin: 0 auto;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n}", ""]);
+exports.push([module.i, "main[data-v-f348271a] {\n  max-width: 1440px;\n  padding: 96px 24px 0;\n  margin: 0 auto;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n}\n@media (max-width: 900px) {\nmain[data-v-f348271a] {\n    padding: 76px 12px 0;\n}\n}", ""]);
 
 // exports
 
@@ -36671,7 +36679,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".home[data-v-f2b6376c] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: space-between;\n}\n.home .component[data-v-f2b6376c] {\n  width: 100%;\n  border-radius: 10px;\n  background-color: #f8fafc;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n  padding: 16px 24px;\n}\n.home .component.full[data-v-f2b6376c] {\n  flex-basis: 100%;\n  margin: 16px 0;\n}\n.home .component.half[data-v-f2b6376c] {\n  flex-basis: calc(50% - 8px);\n}", ""]);
+exports.push([module.i, ".home[data-v-f2b6376c] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: space-between;\n}\n.home .component[data-v-f2b6376c] {\n  width: 100%;\n  border-radius: 10px;\n  background-color: #f8fafc;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n  padding: 16px 24px;\n}\n.home .component.full[data-v-f2b6376c] {\n  flex-basis: 100%;\n  margin: 16px 0;\n}\n.home .component.half[data-v-f2b6376c] {\n  flex-basis: calc(50% - 8px);\n}\n@media (max-width: 900px) {\n.home .component[data-v-f2b6376c] {\n    padding: 16px 12px;\n}\n.home .component.full[data-v-f2b6376c], .home .component.half[data-v-f2b6376c] {\n    flex-basis: 100%;\n    margin-bottom: 16px;\n    margin-top: 0;\n}\n}", ""]);
 
 // exports
 
@@ -36747,7 +36755,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".modal[data-v-2c7ec46f] {\n  position: fixed;\n  z-index: 100;\n  background-color: rgba(0, 0, 0, 0.1);\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.modal .modal-inner[data-v-2c7ec46f] {\n  background-color: #fff;\n  border-radius: 10px;\n  padding: 16px 24px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n}\n.modal .modal-inner .close-modal[data-v-2c7ec46f] {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  color: #333;\n  font-size: 24px;\n  border-radius: 50%;\n  width: 30px;\n  height: 30px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2px;\n  cursor: pointer;\n}\n.modal .modal-inner .close-modal[data-v-2c7ec46f]:hover {\n  background-color: rgba(100, 100, 100, 0.1);\n}", ""]);
+exports.push([module.i, ".modal[data-v-2c7ec46f] {\n  position: fixed;\n  z-index: 100;\n  background-color: rgba(0, 0, 0, 0.1);\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.modal .modal-inner[data-v-2c7ec46f] {\n  background-color: #fff;\n  border-radius: 10px;\n  padding: 16px 24px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n  z-index: 5;\n}\n.modal .modal-inner .close-modal[data-v-2c7ec46f] {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  color: #333;\n  font-size: 24px;\n  border-radius: 50%;\n  width: 30px;\n  height: 30px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2px;\n  cursor: pointer;\n}\n.modal .modal-inner .close-modal[data-v-2c7ec46f]:hover {\n  background-color: rgba(100, 100, 100, 0.1);\n}", ""]);
 
 // exports
 
@@ -36766,7 +36774,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".header[data-v-7ccfcfc0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 80px;\n  background-color: #f8fafc;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n}\n.header .header-content[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  max-width: 1440px;\n  padding: 8px 24px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n}\n.header .header-content .logo[data-v-7ccfcfc0] {\n  width: 160px;\n  height: 80px;\n  flex-basis: 20%;\n}\n.header .header-content .logo img[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n}\n.header .header-content nav.main-menu[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-grow: 2;\n  padding: 0 16px;\n}\n.header .header-content nav.main-menu a[data-v-7ccfcfc0] {\n  display: block;\n  margin: 0 8px;\n  color: #333;\n  font-size: 18px;\n}\n.header .header-content .user-actions[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  flex-basis: 20%;\n}\n.header .header-content .user-actions .btn[data-v-7ccfcfc0] {\n  display: block;\n  margin-left: 16px;\n}", ""]);
+exports.push([module.i, ".header[data-v-7ccfcfc0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 80px;\n  background-color: #f8fafc;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n  z-index: 5;\n}\n.header .header-content[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  max-width: 1440px;\n  padding: 8px 24px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n}\n.header .header-content .mobile-menu-trigger[data-v-7ccfcfc0] {\n  display: none;\n  outline: none;\n  background-color: transparent;\n  border-style: hidden;\n  font-size: 32px;\n}\n.header .header-content .mobile-menu-trigger i[data-v-7ccfcfc0] {\n  pointer-events: none;\n}\n.header .header-content .logo[data-v-7ccfcfc0] {\n  width: 160px;\n  height: 80px;\n  flex-basis: 20%;\n  background-color: cornflowerblue;\n}\n.header .header-content .logo img[data-v-7ccfcfc0] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n}\n.header .header-content nav.main-menu[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-grow: 2;\n  padding: 0 16px;\n}\n.header .header-content nav.main-menu a[data-v-7ccfcfc0] {\n  display: block;\n  margin: 0 8px;\n  color: #333;\n  font-size: 18px;\n}\n.header .header-content .user-actions[data-v-7ccfcfc0] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  flex-basis: 20%;\n}\n.header .header-content .user-actions .btn[data-v-7ccfcfc0] {\n  display: block;\n  margin-left: 16px;\n}\n@media (max-width: 900px) {\n.header[data-v-7ccfcfc0] {\n    height: 76px;\n    transition: 0.3s;\n}\n.header .header-content .mobile-menu-trigger[data-v-7ccfcfc0] {\n    display: block;\n    transition: 0.3s;\n}\n.header .header-content .logo[data-v-7ccfcfc0] {\n    height: 60px;\n    flex-basis: unset;\n    width: 100px;\n    transition: 0.3s;\n}\n.header .header-content nav.main-menu[data-v-7ccfcfc0] {\n    display: none;\n    transition: 0.3s;\n}\n.header .header-content .user-actions[data-v-7ccfcfc0] {\n    display: none;\n    transition: 0.3s;\n}\n.header.is_active[data-v-7ccfcfc0] {\n    height: 100vh;\n}\n.header.is_active .header-content[data-v-7ccfcfc0] {\n    flex-direction: row;\n    flex-wrap: wrap;\n    align-items: flex-start;\n    justify-content: center;\n}\n.header.is_active .header-content .logo[data-v-7ccfcfc0] {\n    order: 1;\n    flex-basis: 50%;\n    max-width: 100px;\n}\n.header.is_active .header-content .logo img[data-v-7ccfcfc0] {\n    width: 100px;\n}\n.header.is_active .header-content .mobile-menu-trigger[data-v-7ccfcfc0] {\n    order: 2;\n    flex-basis: 50%;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    height: 60px;\n    flex-grow: 2;\n}\n.header.is_active .header-content nav.main-menu[data-v-7ccfcfc0] {\n    flex-basis: 100%;\n    order: 3;\n    display: flex;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    justify-content: center;\n}\n.header.is_active .header-content nav.main-menu a[data-v-7ccfcfc0] {\n    margin: 8px 0;\n    font-size: 20px;\n}\n.header.is_active .header-content .user-actions[data-v-7ccfcfc0] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    order: 4;\n}\n.header.is_active .header-content .user-actions .btn[data-v-7ccfcfc0] {\n    margin: 0 0 12px 0;\n}\n}", ""]);
 
 // exports
 
@@ -68953,21 +68961,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "main",
-    [
-      _c("main-header"),
-      _vm._v(" "),
-      _c("router-view"),
-      _vm._v(" "),
-      _c("passport-clients"),
-      _vm._v(" "),
-      _c("passport-authorized-clients"),
-      _vm._v(" "),
-      _c("passport-personal-access-tokens")
-    ],
-    1
-  )
+  return _c("main", [_c("main-header"), _vm._v(" "), _c("router-view")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -69649,13 +69643,21 @@ var render = function() {
         { staticClass: "header-content" },
         [
           _c("router-link", { staticClass: "logo", attrs: { to: "/" } }, [
-            _c("img", { attrs: { src: "", alt: "Here must be some image" } })
+            _c("img", { attrs: { src: "", alt: "" } })
           ]),
           _vm._v(" "),
           _c(
             "nav",
             { staticClass: "main-menu" },
-            [_c("router-link", { attrs: { to: "./" } }, [_vm._v("Home")])],
+            [
+              _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
+              _vm._v(" "),
+              _c("router-link", { attrs: { to: "/" } }, [_vm._v("EXAMPLE")]),
+              _vm._v(" "),
+              _c("router-link", { attrs: { to: "/" } }, [_vm._v("EXAMPLE")]),
+              _vm._v(" "),
+              _c("router-link", { attrs: { to: "/" } }, [_vm._v("EXAMPLE")])
+            ],
             1
           ),
           _vm._v(" "),
@@ -69702,6 +69704,19 @@ var render = function() {
                 : _vm._e()
             ],
             1
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "mobile-menu-trigger",
+              on: {
+                click: function($event) {
+                  return _vm.openMobileMenu($event)
+                }
+              }
+            },
+            [_c("i", { staticClass: "far fa-bars" })]
           )
         ],
         1

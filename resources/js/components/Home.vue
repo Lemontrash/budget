@@ -47,4 +47,17 @@ export default {
   }
 
 }
+
+@media (max-width:900px) {
+  .home {
+    .component {
+      padding:16px 12px;
+      &.full, &.half {
+        flex-basis:100%;
+        margin-bottom: 16px;
+        margin-top: 0;
+      }
+    }
+  }
+}
 </style>

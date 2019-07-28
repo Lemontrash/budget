@@ -39,6 +39,7 @@ export default {
     flex-direction: column;
     align-items: center;
     position: relative;
+    z-index:5;
     .close-modal {
       position: absolute;
       top: 8px;
