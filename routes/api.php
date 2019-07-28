@@ -30,3 +30,13 @@ Route::group([
         Route::get('user', 'AuthController@user');
     });
 });
+
+
+Route::post('/getAllCategories', 'CategoryController@getAllCategories')->middleware('auth:api');
+
+Route::post('/getAllActivities', 'ActivityController@getAllActivities')->middleware('auth:api');
+Route::post('/addActivity', 'ActivityController@addActivity')->middleware('auth:api');
+
+Route::post('/getSummaryForLastMonth', 'SummaryController@addActivity')->middleware('auth:api');
+Route::post('/getSummaryForLastYear', 'SummaryController@addActivity')->middleware('auth:api');
+Route::post('/getSummaryForSetAmountOfDays', 'SummaryController@addActivity')->middleware('auth:api');

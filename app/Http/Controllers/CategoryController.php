@@ -9,13 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
-    public function getAllCategories(Request $request){
-        $userId = Auth::id();
-
-        $categories = Category::where('parentCategory', '')->get();
-        $customCategories = CustomCategory::where('personal', 'no')->get();
-
-
-
+    public function getAllCategories(){
+        $categories = Category::all();
+        $categories = ParsingController::parseCategoriesWithSubcategories($categories);
+        return response()->json(['success' => true, 'value' => $categories]);
     }
+
+
 }
