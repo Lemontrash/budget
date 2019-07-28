@@ -7,29 +7,29 @@ use Illuminate\Http\Request;
 class ParsingController extends Controller
 {
     public static function parseCategoriesWithSubcategories($items){
-        foreach ($items as $item) {
-            $data[]['id']           = $item->id;
-            $data[]['name']         = $item->name;
-            $data[]['icon']         = $item->icon;
-            $data[]['created_at']   = $item->created_at->timestamp;
-            $data[]['updated_at']   = $item->updated_at->timestamp;
+        foreach ($items as  $key => $item) {
+            $data[$key]['id']           = $item->id;
+            $data[$key]['name']         = $item->name;
+            $data[$key]['icon']         = $item->icon;
+            $data[$key]['created_at']   = $item->created_at->timestamp;
+            $data[$key]['updated_at']   = $item->updated_at->timestamp;
 
             if(!empty($item->parentCategory)){
-                $data[]['parentCategory'] = $item->parentCategory;
+                $data[$key]['parentCategory'] = $item->parentCategory;
             }
         }
         return $data;
     }
 
     public static function parseCustomCategoriesWithSubcategories($items){
-        foreach ($items as $item) {
-            $data[]['id']           = $item->id;
-            $data[]['name']         = $item->name;
-            $data[]['icon']         = $item->icon;
-            $data[]['owner']        = $item->owner;
-            $data[]['personal']     = $item->personal;
-            $data[]['created_at']   = $item->created_at->timestamp;
-            $data[]['updated_at']   = $item->updated_at->timestamp;
+        foreach ($items as $key => $item) {
+            $data[$key]['id']           = $item->id;
+            $data[$key]['name']         = $item->name;
+            $data[$key]['icon']         = $item->icon;
+            $data[$key]['owner']        = $item->owner;
+            $data[$key]['personal']     = $item->personal;
+            $data[$key]['created_at']   = $item->created_at->timestamp;
+            $data[$key]['updated_at']   = $item->updated_at->timestamp;
 
             if(!empty($item->parentCategory)){
                 $data[]['parentCategory'] = $item->parentCategory;
@@ -39,28 +39,28 @@ class ParsingController extends Controller
     }
 
     public static function parseUsers($items){
-        foreach ($items as $item) {
-            $data[]['id']                   = $item->id;
-            $data[]['name']                 = $item->name;
-            $data[]['email']                = $item->email;
-            $data[]['phone']                = $item->phone;
-            $data[]['remember_token']       = $item->remember_token;
-            $data[]['created_at']           = $item->created_at->timestamp;
-            $data[]['updated_at']           = $item->updated_at->timestamp;
+        foreach ($items as $key => $item) {
+            $data[$key]['id']                   = $item->id;
+            $data[$key]['name']                 = $item->name;
+            $data[$key]['email']                = $item->email;
+            $data[$key]['phone']                = $item->phone;
+            $data[$key]['remember_token']       = $item->remember_token;
+            $data[$key]['created_at']           = $item->created_at->timestamp;
+            $data[$key]['updated_at']           = $item->updated_at->timestamp;
         }
         return $data;
     }
 
     public static function parseActivities($items){
-        foreach ($items as $item) {
-            $data[]['id']               = $item->id;
-            $data[]['categoryId']       = $item->categoryId;
-            $data[]['activityName']     = $item->activityName;
-            $data[]['userId']           = $item->userId;
-            $data[]['amount_of_money']  = $item->amount_of_money;
-            $data[]['currency']         = $item->currency;
-            $data[]['created_at']       = $item->created_at->timestamp;
-            $data[]['updated_at']       = $item->updated_at->timestamp;
+        foreach ($items as $key => $item) {
+            $data[$key]['id']               = $item->id;
+            $data[$key]['categoryId']       = $item->categoryId;
+            $data[$key]['activityName']     = $item->activityName;
+            $data[$key]['userId']           = $item->userId;
+            $data[$key]['amount_of_money']  = $item->amount_of_money;
+            $data[$key]['currency']         = $item->currency;
+            $data[$key]['created_at']       = $item->created_at->timestamp;
+            $data[$key]['updated_at']       = $item->updated_at->timestamp;
         }
         return $data;
     }
