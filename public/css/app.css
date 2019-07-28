@@ -10653,6 +10653,7 @@ a.text-dark:focus {
   padding: 8px 32px;
   color: #fff;
   background-color: cornflowerblue;
+  white-space: nowrap;
 }
 
 .btn:hover {

@@ -15,7 +15,9 @@ export default {
   },
   components : {
     Home, MainHeader,
-  }
+  },
+  
+
 }
 </script>
 

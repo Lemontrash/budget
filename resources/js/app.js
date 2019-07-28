@@ -12,11 +12,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import router from './router.js'
 import VueApexCharts from 'vue-apexcharts'
+import VueCookies from 'vue-cookies'
+
+
+//mixins
+require('./mixins.js');
 // TODO: import VueModal from 'vue-js-modal'
 
 import App from './App.vue';
 
-
+Vue.use(VueCookies)
 Vue.use(VueApexCharts)
 Vue.component('apexchart', VueApexCharts)
 
