@@ -1,7 +1,8 @@
 <template>
   <div class="chart">
+    <h2>Last month chart</h2>
     <div>
-      <apexchart width="380" type="pie" :options="options" :series="series"></apexchart>
+      <apexchart type=pie width=380 :options="chartOptions" :series="series" />
     </div>
   </div>
 </template>
@@ -9,10 +10,26 @@
 <script>
 
 export default {
-  data: function() {
+  data() {
     return {
-      options: {},
-      series: [44, 55, 41, 17, 15]
+      series: [44, 55, 13, 43, 22],
+      chartOptions: {
+        labels: ['Transport', 'Medicine', 'Culture', 'Food', 'Girls'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      },
+      fill: {
+        type: 'gradient',
+      },
     }
   },
   created() {

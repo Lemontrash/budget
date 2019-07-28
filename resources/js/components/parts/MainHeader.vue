@@ -36,17 +36,16 @@ export default {
     }
   },
   created() {
-    let user_token = this.$cookies.get('token');
-    if(user_token) {
+    // let user_token = this.$cookies.get('token');
+    if(this.$cookies.get('token')) {
       axios
         .get('/api/user', {
           headers : {
             Accept : 'application/json',
-            Authorization : 'Bearer '+user_token,
+            Authorization : 'Bearer '+this.$cookies.get('token'),
           }
         })
           .then(res=>{
-            // console.log(res);
             if(res.data.id) {
               this.currentUser = true;
             }
@@ -55,7 +54,7 @@ export default {
             console.log(err);
           });
     }
-
+    // this.getAllCategories();
   },
   methods : {
     logout() {
