@@ -76,13 +76,16 @@
             <span>I agree with <b>Terms and contitions</b></span>
           </label>
         </div>
+
         <button
           @submit.prevent="onSubmit"
           onclick="event.preventDefault()"
           @click="createUser()"
           class="btn big-btn"
           :class="{disabled : notice}"
-        >Sign up!</button>
+        >
+          Sign up!
+        </button>
 
 
 
@@ -127,8 +130,6 @@ export default {
           .post('/api/auth/signup',this.userData)
             .then(res => {
               console.log(res);
-
-              // TODO: Waiting kirill fox fix login backedn
               //Login user after successfull registration
               axios
                 .post('/api/auth/login',{
@@ -137,8 +138,9 @@ export default {
                   remember_me : false
                 })
                 .then(res => {
-
                   console.log(res);
+                  this.$cookies.set('token',res.data.access_token,60*60*24*30);
+                  document.location.reload(true);
                 })
                 .catch(error => {
                   console.log(error);

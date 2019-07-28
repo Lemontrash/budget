@@ -18,6 +18,7 @@
   padding:8px 32px;
   color:#fff;
   background-color: cornflowerblue;
+  white-space: nowrap;
   &:hover {
     background-color: #fff;
     color: cornflowerblue;
@@ -106,4 +107,11 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+h2 {
+  color: #333;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 12px;
 }

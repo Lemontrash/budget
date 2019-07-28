@@ -12,6 +12,8 @@ class CategoryController extends Controller
     public function getAllCategories(){
         $categories = Category::all();
         $categories = ParsingController::parseCategoriesWithSubcategories($categories);
+        // dd($categories);
+
         return response()->json(['success' => true, 'value' => $categories]);
     }
 

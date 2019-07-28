@@ -22,7 +22,9 @@ class ActivityController extends Controller
 
 
     public function addActivity(Request $request){
+
         $categoryId = $request->get('categoryId');
+        dd(Auth::id());
         $name = $request->get('name');
         $money = $request->get('money');
         $currency = $request->get('currency');

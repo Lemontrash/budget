@@ -15,39 +15,75 @@
         <router-link class="btn inverted" v-if="currentUser == false" :to="'/registration'">SignUp</router-link>
         <button class="btn" v-if="currentUser == false" @click="openLogin">Login</button>
 
-        <router-link v-if="currentUser == true" :to="'/my-account'">My Account</router-link>
+        <router-link class="btn inverted" v-if="currentUser == true" :to="'/my-account'">My Account</router-link>
         <button class="btn" v-if="currentUser == true" @click="logout">Logout</button>
       </div>
 
     </div>
+    <modal v-if="openLoginModal" @close="closeLoginModal"><login/></modal>
   </div>
+
 </template>
 
 <script>
 import Login from './Login.vue';
-
+import Modal from './../modals/Modal.vue';
 export default {
   data() {
     return {
       currentUser : false,
+      openLoginModal : false,
     }
   },
   created() {
-    // TODO: check if user logged in
+    // let user_token = this.$cookies.get('token');
+    if(this.$cookies.get('token')) {
+      axios
+        .get('/api/user', {
+          headers : {
+            Accept : 'application/json',
+            Authorization : 'Bearer '+this.$cookies.get('token'),
+          }
+        })
+          .then(res=>{
+            if(res.data.id) {
+              this.currentUser = true;
+            }
+          })
+          .catch(err=>{
+            console.log(err);
+          });
+    }
+    // this.getAllCategories();
   },
   methods : {
     logout() {
-      // TODO: logout button event
+      axios
+        .get('api/auth/logout',{
+          headers : {
+            Accept : 'application/json',
+            Authorization : 'Bearer ' + this.$cookies.get('token'),
+          }
+        })
+          .then(res => {
+            console.log(res);
+            if(res.data.success) {
+              this.$cookies.remove('token');
+              document.location.reload(true);
+            }
+          })
+          .catch(err => {console.log(err);})
     },
     openLogin() {
-      this.$modal.show(Login, {}, {
-
-      });
-      console.log('OpenLogin');
+      this.openLoginModal = true;
+    },
+    closeLoginModal(value) {
+      this.openLoginModal = value;
     }
   },
   components : {
     Login,
+    Modal,
   }
 
 }
@@ -101,6 +137,10 @@ export default {
       flex-direction: row;
       align-items: center;
       flex-basis:20%;
+      .btn {
+        display: block;
+        margin-left:16px;
+      }
     }
   }
 

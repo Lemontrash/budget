@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Budget</title>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/fontawesome-all.min.css') }}" rel="stylesheet">
+
     </head>
     <body>
       <div id="app"></div>
